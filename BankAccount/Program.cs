@@ -13,6 +13,9 @@ namespace BankAccount
 
             //do while loop is needed to restart the program
 
+            Console.WriteLine("Welcome to The United Banks. \nTo start press one of the following numbers displayed");
+            Console.WriteLine();
+
             Console.WriteLine("[1] View Client Information");
             Console.WriteLine("[2] View Account Balance");
             Console.WriteLine("[3] Deposit Funds");
@@ -37,7 +40,7 @@ namespace BankAccount
             }
             else if (userChoice == three)
             {
-                DepositFunds Deposit = new DepositFunds();
+                DepositFunds Deposit = new DepositFunds()
             }
         }
     }

@@ -31,7 +31,11 @@ namespace BankAccount
             this.savingsAccount = savingsAccount;
         }
 
-
+        public virtual void Deposit()
+        {
+            Console.WriteLine("Current Checkings Balance: " + checkingBalance);
+            Console.WriteLine("Current Savings Balance: " + savingsBalance);
+        }
 
     }
 }
