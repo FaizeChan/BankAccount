@@ -8,8 +8,8 @@ namespace BankAccount
 {
     class AccountBalance : ClientInformation
     {
-        private double checkingBalance;
-        private double savingsBalance;
+        protected double checkingBalance;
+        protected double savingsBalance;
 
         //I'm only getting Checking and savings from this class because this isnt the right class to take
         //money out off or to put money in.
@@ -36,10 +36,10 @@ namespace BankAccount
             this.savingsBalance = savingsBalance;
         }
 
-        public virtual void ClientBalance()
+        public void ClientBalance()
         {
-            Console.WriteLine("Checking Balance: " + checkingBalance);
-            Console.WriteLine("Savings Balance: " + savingsBalance);
+            Console.WriteLine(" Checking Balance: " + checkingBalance);
+            Console.WriteLine(" Savings Balance: " + savingsBalance);
         }
 
     }

@@ -14,10 +14,12 @@ namespace BankAccount
         protected string name;
         protected int accountNumber;
 
+
         //Getting the private fields to set them in the program when the pc asks the user for there information.
 
         public string Name { get; set; }
         public int AccountNumber { get; set; }
+        
 
         //Tis is simply the default Constructor that is required to have the other classes inherit
         //from this class since this one is the Parent.
@@ -39,6 +41,7 @@ namespace BankAccount
         {
             Console.WriteLine("Name: " + name);
             Console.WriteLine("Account Number: " + accountNumber);
+            
         }
     }
 }

@@ -6,23 +6,18 @@ using System.Threading.Tasks;
 
 namespace BankAccount
 {
-    class DepositFunds : ClientInformation
+    class DepositFunds : AccountBalance
     {
         private double checkingAccount;
         private double savingsAccount;
 
         public double CheckingAccount { get; set; }
         public double SavingsAccount { get; set; }
+        public double DepositMoney { get; set; }
 
         public DepositFunds()
         {
 
-        }
-
-        public DepositFunds(string name, int accountNumber)
-        {
-            this.Name = name;
-            this.AccountNumber = accountNumber;
         }
 
         public DepositFunds(double checkingAccount, double savingsAccount)
@@ -31,10 +26,15 @@ namespace BankAccount
             this.savingsAccount = savingsAccount;
         }
 
-        public virtual void Deposit()
+        public DepositFunds(double DepositMoney)
         {
-            Console.WriteLine("Current Checkings Balance: " + checkingBalance);
-            Console.WriteLine("Current Savings Balance: " + savingsBalance);
+            this.DepositMoney = DepositMoney;
+        }
+
+        public void CheckDepositting()
+        {
+            checkingAccount += double.Parse(Console.ReadLine());
+            Console.WriteLine("Your total Amount in your checking account is {0}.", checkingAccount);
         }
 
     }
